@@ -19,13 +19,8 @@ namespace WebApplication2
                     routes.MapRoute(
             name: "sample",
             url: "{controller}/{action}",
-           new { controller = "Cv", action = "CvIndex" }
+           new { controller = "Login", action = "LoginForm" }
 );
-            routes.MapRoute(
-name: "Default1",
-url: "{controller}/{action}",
-new { controller = "Form", action = "Index" }
-        );
 
         }
     }
