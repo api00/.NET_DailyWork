@@ -11,27 +11,39 @@ namespace MID_PROJECT.Models.database
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class user_details
     {
-        [Required]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public user_details()
+        {
+            this.b_profile = new HashSet<b_profile>();
+            this.s_appartment_details = new HashSet<s_appartment_details>();
+            this.s_profile = new HashSet<s_profile>();
+            this.t_profile = new HashSet<t_profile>();
+            this.trans_details_sb = new HashSet<trans_details_sb>();
+            this.trans_details_sb1 = new HashSet<trans_details_sb>();
+        }
+    
         public int id { get; set; }
-
-        [Required]
         public string name { get; set; }
-
-        [Required]
-        [EmailAddress]
         public string email { get; set; }
-
-        [Required]
         public int user_id { get; set; }
-
-        [Required]
-        [MinLength(9, ErrorMessage = "Minium 8 character is required")]
         public string password { get; set; }
         public string rules { get; set; }
         public Nullable<int> status { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<b_profile> b_profile { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<s_appartment_details> s_appartment_details { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<s_profile> s_profile { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<t_profile> t_profile { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<trans_details_sb> trans_details_sb { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<trans_details_sb> trans_details_sb1 { get; set; }
     }
 }

@@ -133,23 +133,38 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\database\UserDetails.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UserDetails.Context.tt</DependentUpon>
+    <Compile Include="Models\database\b_profile.cs">
+      <DependentUpon>MID.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\database\UserDetails.cs">
+    <Compile Include="Models\database\MID.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>UserDetails.tt</DependentUpon>
+      <DependentUpon>MID.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\database\UserDetails.Designer.cs">
+    <Compile Include="Models\database\MID.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>UserDetails.edmx</DependentUpon>
+      <DependentUpon>MID.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\database\MID.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MID.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\database\s_appartment_details.cs">
+      <DependentUpon>MID.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\database\s_profile.cs">
+      <DependentUpon>MID.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\database\trans_details_sb.cs">
+      <DependentUpon>MID.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\database\t_profile.cs">
+      <DependentUpon>MID.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\database\user_details.cs">
-      <DependentUpon>UserDetails.tt</DependentUpon>
+      <DependentUpon>MID.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -162,24 +177,24 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\database\UserDetails.Context.tt">
+    <Content Include="Models\database\MID.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>UserDetails.Context.cs</LastGenOutput>
-      <DependentUpon>UserDetails.edmx</DependentUpon>
+      <DependentUpon>MID.edmx</DependentUpon>
+      <LastGenOutput>MID.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\database\UserDetails.tt">
+    <Content Include="Models\database\MID.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>UserDetails.edmx</DependentUpon>
-      <LastGenOutput>UserDetails.cs</LastGenOutput>
+      <DependentUpon>MID.edmx</DependentUpon>
+      <LastGenOutput>MID.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\database\UserDetails.edmx">
+    <EntityDeploy Include="Models\database\MID.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>UserDetails.Designer.cs</LastGenOutput>
+      <LastGenOutput>MID.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\database\UserDetails.edmx.diagram">
-      <DependentUpon>UserDetails.edmx</DependentUpon>
+    <Content Include="Models\database\MID.edmx.diagram">
+      <DependentUpon>MID.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />

@@ -31,7 +31,7 @@ namespace MID_PROJECT.Controllers
         {
             if (ModelState.IsValid)
             {
-                MIDEntities db = new MIDEntities();
+                MIDEntities1 db = new MIDEntities1();
                 db.user_details.Add(s1);
                 db.SaveChanges();
                 TempData["name"] = "Bill";
@@ -48,7 +48,7 @@ namespace MID_PROJECT.Controllers
         [HttpPost]
         public ActionResult Login(user_details s1)
         {
-            var db = new MIDEntities();
+            var db = new MIDEntities1();
             var product = (from p in db.user_details where p.email == s1.email && p.password == s1.password select p).SingleOrDefault();
             if (product != null)
             {

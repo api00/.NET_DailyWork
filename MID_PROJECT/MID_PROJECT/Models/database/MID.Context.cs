@@ -13,10 +13,10 @@ namespace MID_PROJECT.Models.database
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MIDEntities : DbContext
+    public partial class MIDEntities1 : DbContext
     {
-        public MIDEntities()
-            : base("name=MIDEntities")
+        public MIDEntities1()
+            : base("name=MIDEntities1")
         {
         }
     
@@ -25,6 +25,11 @@ namespace MID_PROJECT.Models.database
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<b_profile> b_profile { get; set; }
+        public virtual DbSet<s_appartment_details> s_appartment_details { get; set; }
+        public virtual DbSet<s_profile> s_profile { get; set; }
+        public virtual DbSet<t_profile> t_profile { get; set; }
+        public virtual DbSet<trans_details_sb> trans_details_sb { get; set; }
         public virtual DbSet<user_details> user_details { get; set; }
     }
 }
